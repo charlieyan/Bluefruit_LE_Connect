@@ -195,7 +195,7 @@ class UARTViewController: UIViewController, UITextFieldDelegate, UITextViewDeleg
             
             
             //Update ASCII text on background thread A
-            let appendString = "" // or "\n"
+            let appendString = "\n"
             let attrAString = NSAttributedString(string: ((newString! as String)+appendString), attributes: self.redFontDict as? [NSObject : AnyObject])
             let newAsciiText = NSMutableAttributedString(attributedString: self.consoleAsciiText!)
             newAsciiText.appendAttributedString(attrAString)

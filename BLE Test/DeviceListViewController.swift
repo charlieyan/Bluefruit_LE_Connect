@@ -119,7 +119,9 @@ class DeviceListViewController : UIViewController, UITableViewDelegate, UITableV
         }
         
         let device = devices[sender.tag]
-        
+        self.connectInMode(ConnectionMode.UART, peripheral: device.peripheral)
+
+        /*
         // If device is not uart capable, go straight to Info mode
         if device.isUART == false {
             connectInMode(ConnectionMode.Info, peripheral: device.peripheral)
@@ -165,7 +167,7 @@ class DeviceListViewController : UIViewController, UITableViewDelegate, UITableV
         self.presentViewController(alertController, animated: true) { () -> Void in
             
         }
-        
+        */
     }
     
     
